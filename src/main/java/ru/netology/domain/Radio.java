@@ -24,7 +24,7 @@ public class Radio {
 
     public void onNextSound() {
         if (soundVolume == 10) {
-            this.soundVolume = soundVolume;
+            this.soundVolume = 10;
         }
         if (soundVolume < 10) {
             this.soundVolume++;
@@ -37,7 +37,7 @@ public class Radio {
             this.soundVolume--;
         }
         if (soundVolume == 0) {
-            this.soundVolume = soundVolume;
+            this.soundVolume = 0;
         }
     }
 
@@ -52,10 +52,10 @@ public class Radio {
     }
 
     public void onNextStation() {
-        if (currentStation < 9) {
+        if (currentStation < 10) {
             this.currentStation++;
         }
-        if (currentStation == 9) {
+        if (currentStation == 10) {
             this.currentStation = 0;
         }
     }
