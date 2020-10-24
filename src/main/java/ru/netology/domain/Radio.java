@@ -52,23 +52,23 @@ public class Radio {
     }
 
     public void onNextStation() {
-        if (currentStation < 10) {
-            this.currentStation++;
+        if (currentStation <= 9) {
+            this.currentStation = currentStation + 1;
         }
-        if (currentStation == 10) {
+        if (currentStation > 9) {
             this.currentStation = 0;
         }
+
     }
 
     public void onPreviousStation() {
-        if (currentStation > 0) {
-            this.currentStation--;
-        }
-        if (currentStation == 0) {
+        if (currentStation <= 0) {
             this.currentStation = 9;
+            return;
+        }
+            this.currentStation = currentStation - 1;
         }
     }
 
-}
 
 

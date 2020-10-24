@@ -133,8 +133,8 @@ class RadioTest {
     @Test
     void onPreviousStationInRange() {
         Radio radio = new Radio();
-        int currentStation = 5;
-        int expected = 4;
+        int currentStation = 1;
+        int expected = 0;
         radio.setCurrentStation(currentStation);
         radio.onPreviousStation();
         assertEquals(expected, radio.getCurrentStation());
