@@ -64,6 +64,16 @@ class RadioTest {
     }
 
     @Test
+    void  onPrevStationMin() {
+        Radio radio = new Radio();
+        int currentStation = 1;
+        int expected = 0;
+        radio.setCurrentStation(currentStation);
+        radio.onPrevStation();
+        assertEquals(expected, radio.getCurrentStation());
+    }
+
+    @Test
     void onPrevStationLessMin() {
         Radio radio = new Radio();
         int currentStation = 0;
