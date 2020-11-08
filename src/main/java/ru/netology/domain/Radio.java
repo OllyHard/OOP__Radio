@@ -31,10 +31,10 @@ public class Radio {
     }
 
     public void onNextStation() {
-        if (currentStation < maxStation) {
-            this.currentStation++;
+        if (currentStation <= maxStation) {
+            this.currentStation = currentStation + 1;
         }
-        if (currentStation == maxStation) {
+        if (currentStation > maxStation) {
             this.currentStation = minStation;
         }
     }
